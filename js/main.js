@@ -8,7 +8,7 @@ var input =document.getElementById("input");
 
 let container =document.getElementsByClassName('section');
 async function getDataByCity(city){
-    let respone = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=afa91ea0b4f844738f2211329241201&q=${city}&days=7`);
+    let respone = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=afa91ea0b4f844738f2211329241201&q=${city}&days=7`);
 //    console.log(respone);
 if(respone.ok){
      data=await respone.json();
@@ -151,7 +151,7 @@ async function getDataByLocation(latitude,longitude){
     //  var loc1=51.52;
     //  var loc2=-0.11;
     
-    let respone = await fetch("http://api.weatherapi.com/v1/forecast.json?key=afa91ea0b4f844738f2211329241201&q="+latitude+","+longitude+"&days=7");
+    let respone = await fetch("https://api.weatherapi.com/v1/forecast.json?key=afa91ea0b4f844738f2211329241201&q="+latitude+","+longitude+"&days=7");
 //    console.log(respone);
 if(respone.ok){
      data=await respone.json();
